@@ -1,0 +1,36 @@
+SELECT  *
+WHERE
+  {   {   {   {   {   { ?keggDrug_0 <http://bio2rdf.org/ns/bio2rdf#xRef> <http://bio2rdf.org/cas:54-47-7> .
+                        ?keggDrug_0 <http://bio2rdf.org/ns/bio2rdf#mass> ?mass_0
+                        FILTER ( <http://www.w3.org/2001/XMLSchema#double>(?mass_0) > 5 )
+                      }
+                    UNION
+                      { ?keggDrug_1 <http://bio2rdf.org/ns/bio2rdf#xRef> <http://bio2rdf.org/cas:29908-03-0> .
+                        ?keggDrug_1 <http://bio2rdf.org/ns/bio2rdf#mass> ?mass_1
+                        FILTER ( <http://www.w3.org/2001/XMLSchema#double>(?mass_1) > 5 )
+                      }
+                  }
+                UNION
+                  { ?keggDrug_2 <http://bio2rdf.org/ns/bio2rdf#xRef> <http://bio2rdf.org/cas:56-40-6> .
+                    ?keggDrug_2 <http://bio2rdf.org/ns/bio2rdf#mass> ?mass_2
+                    FILTER ( <http://www.w3.org/2001/XMLSchema#double>(?mass_2) > 5 )
+                  }
+              }
+            UNION
+              { ?keggDrug_3 <http://bio2rdf.org/ns/bio2rdf#xRef> <http://bio2rdf.org/cas:110-15-6> .
+                ?keggDrug_3 <http://bio2rdf.org/ns/bio2rdf#mass> ?mass_3
+                FILTER ( <http://www.w3.org/2001/XMLSchema#double>(?mass_3) > 5 )
+              }
+          }
+        UNION
+          { ?keggDrug_4 <http://bio2rdf.org/ns/bio2rdf#xRef> <http://bio2rdf.org/cas:56-84-8> .
+            ?keggDrug_4 <http://bio2rdf.org/ns/bio2rdf#mass> ?mass_4
+            FILTER ( <http://www.w3.org/2001/XMLSchema#double>(?mass_4) > 5 )
+          }
+      }
+    UNION
+      { ?keggDrug_5 <http://bio2rdf.org/ns/bio2rdf#xRef> <http://bio2rdf.org/cas:70-26-8> .
+        ?keggDrug_5 <http://bio2rdf.org/ns/bio2rdf#mass> ?mass_5
+        FILTER ( <http://www.w3.org/2001/XMLSchema#double>(?mass_5) > 5 )
+      }
+  }

@@ -1,0 +1,507 @@
+SELECT  *
+WHERE
+  {   { ?y_0 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Tetrahydrocannabinol> .
+        ?Int_0 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_0 .
+        ?Int_0 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_0 .
+        ?Int_0 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_0}
+    UNION
+      { ?y_1 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Mescaline> .
+        ?Int_1 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_1 .
+        ?Int_1 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_1 .
+        ?Int_1 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_1}
+    UNION
+      { ?y_2 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Bacillus_Calmette-Gu%C3%A9rin> .
+        ?Int_2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_2 .
+        ?Int_2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_2 .
+        ?Int_2 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_2}
+    UNION
+      { ?y_3 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Sugammadex> .
+        ?Int_3 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_3 .
+        ?Int_3 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_3 .
+        ?Int_3 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_3}
+    UNION
+      { ?y_4 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Carnitine> .
+        ?Int_4 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_4 .
+        ?Int_4 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_4 .
+        ?Int_4 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_4}
+    UNION
+      { ?y_5 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Mephedrone> .
+        ?Int_5 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_5 .
+        ?Int_5 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_5 .
+        ?Int_5 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_5}
+    UNION
+      { ?y_6 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Cannabidiol> .
+        ?Int_6 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_6 .
+        ?Int_6 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_6 .
+        ?Int_6 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_6}
+    UNION
+      { ?y_7 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Dicoumarol> .
+        ?Int_7 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_7 .
+        ?Int_7 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_7 .
+        ?Int_7 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_7}
+    UNION
+      { ?y_8 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Pregnenolone> .
+        ?Int_8 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_8 .
+        ?Int_8 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_8 .
+        ?Int_8 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_8}
+    UNION
+      { ?y_9 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Pandemrix> .
+        ?Int_9 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_9 .
+        ?Int_9 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_9 .
+        ?Int_9 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_9}
+    UNION
+      { ?y_10 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Abamectin> .
+        ?Int_10 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_10 .
+        ?Int_10 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_10 .
+        ?Int_10 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_10}
+    UNION
+      { ?y_11 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Stanozolol> .
+        ?Int_11 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_11 .
+        ?Int_11 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_11 .
+        ?Int_11 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_11}
+    UNION
+      { ?y_12 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Myristicin> .
+        ?Int_12 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_12 .
+        ?Int_12 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_12 .
+        ?Int_12 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_12}
+    UNION
+      { ?y_13 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Naringenin> .
+        ?Int_13 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_13 .
+        ?Int_13 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_13 .
+        ?Int_13 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_13}
+    UNION
+      { ?y_14 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Rifampicin> .
+        ?Int_14 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_14 .
+        ?Int_14 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_14 .
+        ?Int_14 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_14}
+    UNION
+      { ?y_15 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Articaine> .
+        ?Int_15 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_15 .
+        ?Int_15 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_15 .
+        ?Int_15 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_15}
+    UNION
+      { ?y_16 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Dichlorvos> .
+        ?Int_16 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_16 .
+        ?Int_16 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_16 .
+        ?Int_16 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_16}
+    UNION
+      { ?y_17 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Anabasine> .
+        ?Int_17 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_17 .
+        ?Int_17 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_17 .
+        ?Int_17 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_17}
+    UNION
+      { ?y_18 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Alpha-GPC> .
+        ?Int_18 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_18 .
+        ?Int_18 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_18 .
+        ?Int_18 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_18}
+    UNION
+      { ?y_19 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Hydroxycarbamide> .
+        ?Int_19 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_19 .
+        ?Int_19 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_19 .
+        ?Int_19 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_19}
+    UNION
+      { ?y_20 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Bufotenin> .
+        ?Int_20 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_20 .
+        ?Int_20 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_20 .
+        ?Int_20 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_20}
+    UNION
+      { ?y_21 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Moxidectin> .
+        ?Int_21 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_21 .
+        ?Int_21 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_21 .
+        ?Int_21 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_21}
+    UNION
+      { ?y_22 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Chlortetracycline> .
+        ?Int_22 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_22 .
+        ?Int_22 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_22 .
+        ?Int_22 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_22}
+    UNION
+      { ?y_23 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Ivabradine> .
+        ?Int_23 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_23 .
+        ?Int_23 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_23 .
+        ?Int_23 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_23}
+    UNION
+      { ?y_24 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Bisulepine> .
+        ?Int_24 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_24 .
+        ?Int_24 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_24 .
+        ?Int_24 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_24}
+    UNION
+      { ?y_25 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/5-MeO-DMT> .
+        ?Int_25 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_25 .
+        ?Int_25 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_25 .
+        ?Int_25 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_25}
+    UNION
+      { ?y_26 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Octopamine> .
+        ?Int_26 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_26 .
+        ?Int_26 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_26 .
+        ?Int_26 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_26}
+    UNION
+      { ?y_27 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Nalidixic_acid> .
+        ?Int_27 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_27 .
+        ?Int_27 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_27 .
+        ?Int_27 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_27}
+    UNION
+      { ?y_28 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Hexetidine> .
+        ?Int_28 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_28 .
+        ?Int_28 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_28 .
+        ?Int_28 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_28}
+    UNION
+      { ?y_29 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Dehydroepiandrosterone> .
+        ?Int_29 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_29 .
+        ?Int_29 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_29 .
+        ?Int_29 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_29}
+    UNION
+      { ?y_30 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Cannabinol> .
+        ?Int_30 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_30 .
+        ?Int_30 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_30 .
+        ?Int_30 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_30}
+    UNION
+      { ?y_31 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Flubendazole> .
+        ?Int_31 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_31 .
+        ?Int_31 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_31 .
+        ?Int_31 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_31}
+    UNION
+      { ?y_32 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Tofisopam> .
+        ?Int_32 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_32 .
+        ?Int_32 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_32 .
+        ?Int_32 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_32}
+    UNION
+      { ?y_33 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Obidoxime> .
+        ?Int_33 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_33 .
+        ?Int_33 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_33 .
+        ?Int_33 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_33}
+    UNION
+      { ?y_34 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Dithranol> .
+        ?Int_34 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_34 .
+        ?Int_34 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_34 .
+        ?Int_34 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_34}
+    UNION
+      { ?y_35 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Ciclosporin> .
+        ?Int_35 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_35 .
+        ?Int_35 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_35 .
+        ?Int_35 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_35}
+    UNION
+      { ?y_36 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Metamizole> .
+        ?Int_36 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_36 .
+        ?Int_36 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_36 .
+        ?Int_36 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_36}
+    UNION
+      { ?y_37 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Tetrahydrogestrinone> .
+        ?Int_37 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_37 .
+        ?Int_37 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_37 .
+        ?Int_37 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_37}
+    UNION
+      { ?y_38 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Reproterol> .
+        ?Int_38 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_38 .
+        ?Int_38 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_38 .
+        ?Int_38 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_38}
+    UNION
+      { ?y_39 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Hematoporphyrin> .
+        ?Int_39 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_39 .
+        ?Int_39 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_39 .
+        ?Int_39 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_39}
+    UNION
+      { ?y_40 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Sparteine> .
+        ?Int_40 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_40 .
+        ?Int_40 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_40 .
+        ?Int_40 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_40}
+    UNION
+      { ?y_41 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Xylometazoline> .
+        ?Int_41 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_41 .
+        ?Int_41 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_41 .
+        ?Int_41 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_41}
+    UNION
+      { ?y_42 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Bufexamac> .
+        ?Int_42 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_42 .
+        ?Int_42 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_42 .
+        ?Int_42 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_42}
+    UNION
+      { ?y_43 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Arecoline> .
+        ?Int_43 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_43 .
+        ?Int_43 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_43 .
+        ?Int_43 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_43}
+    UNION
+      { ?y_44 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Noscapine> .
+        ?Int_44 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_44 .
+        ?Int_44 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_44 .
+        ?Int_44 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_44}
+    UNION
+      { ?y_45 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Bromantane> .
+        ?Int_45 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_45 .
+        ?Int_45 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_45 .
+        ?Int_45 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_45}
+    UNION
+      { ?y_46 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Fingolimod> .
+        ?Int_46 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_46 .
+        ?Int_46 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_46 .
+        ?Int_46 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_46}
+    UNION
+      { ?y_47 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Toxiferine> .
+        ?Int_47 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_47 .
+        ?Int_47 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_47 .
+        ?Int_47 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_47}
+    UNION
+      { ?y_48 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Nimustine> .
+        ?Int_48 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_48 .
+        ?Int_48 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_48 .
+        ?Int_48 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_48}
+    UNION
+      { ?y_49 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Bergapten> .
+        ?Int_49 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_49 .
+        ?Int_49 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_49 .
+        ?Int_49 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_49}
+    UNION
+      { ?y_50 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Tetrazepam> .
+        ?Int_50 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_50 .
+        ?Int_50 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_50 .
+        ?Int_50 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_50}
+    UNION
+      { ?y_51 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Melperone> .
+        ?Int_51 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_51 .
+        ?Int_51 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_51 .
+        ?Int_51 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_51}
+    UNION
+      { ?y_52 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Gramicidin> .
+        ?Int_52 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_52 .
+        ?Int_52 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_52 .
+        ?Int_52 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_52}
+    UNION
+      { ?y_53 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Prontosil> .
+        ?Int_53 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_53 .
+        ?Int_53 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_53 .
+        ?Int_53 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_53}
+    UNION
+      { ?y_54 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Synephrine> .
+        ?Int_54 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_54 .
+        ?Int_54 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_54 .
+        ?Int_54 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_54}
+    UNION
+      { ?y_55 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Meticillin> .
+        ?Int_55 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_55 .
+        ?Int_55 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_55 .
+        ?Int_55 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_55}
+    UNION
+      { ?y_56 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Etilefrine> .
+        ?Int_56 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_56 .
+        ?Int_56 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_56 .
+        ?Int_56 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_56}
+    UNION
+      { ?y_57 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Clavulanic_acid> .
+        ?Int_57 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_57 .
+        ?Int_57 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_57 .
+        ?Int_57 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_57}
+    UNION
+      { ?y_58 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Pimobendan> .
+        ?Int_58 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_58 .
+        ?Int_58 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_58 .
+        ?Int_58 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_58}
+    UNION
+      { ?y_59 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Benzbromarone> .
+        ?Int_59 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_59 .
+        ?Int_59 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_59 .
+        ?Int_59 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_59}
+    UNION
+      { ?y_60 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Mesuximide> .
+        ?Int_60 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_60 .
+        ?Int_60 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_60 .
+        ?Int_60 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_60}
+    UNION
+      { ?y_61 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Bromhexine> .
+        ?Int_61 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_61 .
+        ?Int_61 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_61 .
+        ?Int_61 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_61}
+    UNION
+      { ?y_62 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Opipramol> .
+        ?Int_62 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_62 .
+        ?Int_62 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_62 .
+        ?Int_62 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_62}
+    UNION
+      { ?y_63 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Magaldrate> .
+        ?Int_63 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_63 .
+        ?Int_63 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_63 .
+        ?Int_63 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_63}
+    UNION
+      { ?y_64 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Menotropin> .
+        ?Int_64 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_64 .
+        ?Int_64 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_64 .
+        ?Int_64 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_64}
+    UNION
+      { ?y_65 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Cinchocaine> .
+        ?Int_65 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_65 .
+        ?Int_65 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_65 .
+        ?Int_65 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_65}
+    UNION
+      { ?y_66 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Benperidol> .
+        ?Int_66 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_66 .
+        ?Int_66 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_66 .
+        ?Int_66 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_66}
+    UNION
+      { ?y_67 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Trenbolone> .
+        ?Int_67 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_67 .
+        ?Int_67 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_67 .
+        ?Int_67 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_67}
+    UNION
+      { ?y_68 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Aprotinin> .
+        ?Int_68 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_68 .
+        ?Int_68 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_68 .
+        ?Int_68 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_68}
+    UNION
+      { ?y_69 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Dihydralazine> .
+        ?Int_69 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_69 .
+        ?Int_69 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_69 .
+        ?Int_69 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_69}
+    UNION
+      { ?y_70 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Bremelanotide> .
+        ?Int_70 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_70 .
+        ?Int_70 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_70 .
+        ?Int_70 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_70}
+    UNION
+      { ?y_71 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Tioguanine> .
+        ?Int_71 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_71 .
+        ?Int_71 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_71 .
+        ?Int_71 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_71}
+    UNION
+      { ?y_72 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Baeocystin> .
+        ?Int_72 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_72 .
+        ?Int_72 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_72 .
+        ?Int_72 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_72}
+    UNION
+      { ?y_73 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Buserelin> .
+        ?Int_73 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_73 .
+        ?Int_73 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_73 .
+        ?Int_73 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_73}
+    UNION
+      { ?y_74 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Rotigotine> .
+        ?Int_74 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_74 .
+        ?Int_74 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_74 .
+        ?Int_74 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_74}
+    UNION
+      { ?y_75 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Nifurtimox> .
+        ?Int_75 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_75 .
+        ?Int_75 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_75 .
+        ?Int_75 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_75}
+    UNION
+      { ?y_76 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Pyritinol> .
+        ?Int_76 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_76 .
+        ?Int_76 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_76 .
+        ?Int_76 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_76}
+    UNION
+      { ?y_77 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Sodium_picosulfate> .
+        ?Int_77 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_77 .
+        ?Int_77 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_77 .
+        ?Int_77 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_77}
+    UNION
+      { ?y_78 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Pramiracetam> .
+        ?Int_78 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_78 .
+        ?Int_78 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_78 .
+        ?Int_78 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_78}
+    UNION
+      { ?y_79 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Oxiracetam> .
+        ?Int_79 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_79 .
+        ?Int_79 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_79 .
+        ?Int_79 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_79}
+    UNION
+      { ?y_80 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Meclofenoxate> .
+        ?Int_80 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_80 .
+        ?Int_80 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_80 .
+        ?Int_80 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_80}
+    UNION
+      { ?y_81 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/4-HO-DiPT> .
+        ?Int_81 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_81 .
+        ?Int_81 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_81 .
+        ?Int_81 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_81}
+    UNION
+      { ?y_82 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Selamectin> .
+        ?Int_82 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_82 .
+        ?Int_82 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_82 .
+        ?Int_82 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_82}
+    UNION
+      { ?y_83 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Norethisterone> .
+        ?Int_83 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_83 .
+        ?Int_83 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_83 .
+        ?Int_83 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_83}
+    UNION
+      { ?y_84 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Pethidine> .
+        ?Int_84 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_84 .
+        ?Int_84 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_84 .
+        ?Int_84 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_84}
+    UNION
+      { ?y_85 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Epitestosterone> .
+        ?Int_85 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_85 .
+        ?Int_85 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_85 .
+        ?Int_85 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_85}
+    UNION
+      { ?y_86 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Dirucotide> .
+        ?Int_86 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_86 .
+        ?Int_86 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_86 .
+        ?Int_86 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_86}
+    UNION
+      { ?y_87 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Doramectin> .
+        ?Int_87 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_87 .
+        ?Int_87 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_87 .
+        ?Int_87 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_87}
+    UNION
+      { ?y_88 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Silibinin> .
+        ?Int_88 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_88 .
+        ?Int_88 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_88 .
+        ?Int_88 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_88}
+    UNION
+      { ?y_89 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Hydrastine> .
+        ?Int_89 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_89 .
+        ?Int_89 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_89 .
+        ?Int_89 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_89}
+    UNION
+      { ?y_90 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Prostacyclin> .
+        ?Int_90 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_90 .
+        ?Int_90 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_90 .
+        ?Int_90 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_90}
+    UNION
+      { ?y_91 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Vinylbital> .
+        ?Int_91 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_91 .
+        ?Int_91 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_91 .
+        ?Int_91 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_91}
+    UNION
+      { ?y_92 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Brivudine> .
+        ?Int_92 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_92 .
+        ?Int_92 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_92 .
+        ?Int_92 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_92}
+    UNION
+      { ?y_93 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Sitaxentan> .
+        ?Int_93 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_93 .
+        ?Int_93 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_93 .
+        ?Int_93 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_93}
+    UNION
+      { ?y_94 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Mevastatin> .
+        ?Int_94 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_94 .
+        ?Int_94 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_94 .
+        ?Int_94 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_94}
+    UNION
+      { ?y_95 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Strontium_ranelate> .
+        ?Int_95 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_95 .
+        ?Int_95 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_95 .
+        ?Int_95 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_95}
+    UNION
+      { ?y_96 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Mebeverine> .
+        ?Int_96 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_96 .
+        ?Int_96 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_96 .
+        ?Int_96 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_96}
+    UNION
+      { ?y_97 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Bisacodyl> .
+        ?Int_97 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_97 .
+        ?Int_97 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_97 .
+        ?Int_97 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_97}
+    UNION
+      { ?y_98 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Medetomidine> .
+        ?Int_98 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_98 .
+        ?Int_98 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_98 .
+        ?Int_98 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_98}
+    UNION
+      { ?y_99 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Propacetamol> .
+        ?Int_99 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_99 .
+        ?Int_99 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_99 .
+        ?Int_99 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_99}
+    UNION
+      { ?y_100 <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Pleconaril> .
+        ?Int_100 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug1> ?y_100 .
+        ?Int_100 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/interactionDrug2> ?IntDrug_100 .
+        ?Int_100 <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/text> ?IntEffect_100}
+  }
