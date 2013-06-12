@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.junit.Before;
+import org.junit.Ignore;
 
 import tr.edu.ege.seagent.boundarq.test.UnionBoundJoinTest;
 
@@ -22,6 +23,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.sparql.core.DatasetImpl;
 
+@Ignore
 public abstract class AbstractBoundJoinTest {
 
 	protected double arqExecutionTime;
