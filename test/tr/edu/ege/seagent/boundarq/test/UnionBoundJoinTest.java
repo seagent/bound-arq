@@ -24,7 +24,6 @@ import com.hp.hpl.jena.sparql.engine.QueryEngineRegistry;
 
 import experience.AbstractBoundJoinTest;
 
-
 public class UnionBoundJoinTest extends AbstractBoundJoinTest {
 
 	static {
@@ -190,7 +189,7 @@ public class UnionBoundJoinTest extends AbstractBoundJoinTest {
 
 		// execute double chain query
 		compareARQAndBoundJoin(SampleQueries.DOUBLE_CHAIN_BIG_SOLUTION_QUERY,
-				95, "film", "filmName");
+				104, "film", "filmName");
 	}
 
 	/**
@@ -203,7 +202,7 @@ public class UnionBoundJoinTest extends AbstractBoundJoinTest {
 	public void compareARQAndBoundJoinForCrossDomainQuery() throws Exception {
 
 		// execute double chain query
-		compareARQAndBoundJoin(SampleQueries.CROSS_DOMAIN_QUERY_1, 299,
+		compareARQAndBoundJoin(SampleQueries.CROSS_DOMAIN_QUERY_1, 286,
 				"predicate", "object");
 	}
 

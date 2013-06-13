@@ -17,15 +17,15 @@ public class SampleQueries {
 	private static final String NYTIMES_VIRTUOSO_ENDPOINT_URL = "http://155.223.24.47:8891/nytimes/sparql";
 	private static final String LMDB_VIRTUOSO_ENDPOINT_URL = "http://155.223.24.47:8899/lmdb/sparql";
 
-	private static final String CHEBI_4STORE_ENDPOINT_URL = "http://localhost:3000/sparql/";
-	private static final String KEGG_4STORE_ENDPOINT_URL = "http://localhost:4000/sparql/";
-	private static final String DRUGBANK_4STORE_ENDPOINT_URL = "http://localhost:8000/sparql/";
-	private static final String SWDOGFOOD_4STORE_ENDPOINT_URL = "http://localhost:5500/sparql/";
-	private static final String JAMENDO_4STORE_ENDPOINT_URL = "http://localhost:5000/sparql/";
-	private static final String GEONAMES_4STORE_ENDPOINT_URL = "http://localhost:2000/sparql/";
-	private static final String DBPEDIA_4STORE_ENDPOINT_URL = "http://localhost:7000/sparql/";
-	private static final String NYTIMES_4STORE_ENDPOINT_URL = "http://localhost:9000/sparql/";
-	private static final String LMDB_4STORE_ENDPOINT_URL = "http://localhost:2500/sparql/";
+	private static final String CHEBI_4STORE_ENDPOINT_URL = "http://155.223.25.212:3000/sparql/";
+	private static final String KEGG_4STORE_ENDPOINT_URL = "http://155.223.25.212:4000/sparql/";
+	private static final String DRUGBANK_4STORE_ENDPOINT_URL = "http://155.223.25.212:8000/sparql/";
+	private static final String SWDOGFOOD_4STORE_ENDPOINT_URL = "http://155.223.25.212:5500/sparql/";
+	private static final String JAMENDO_4STORE_ENDPOINT_URL = "http://155.223.25.212:5000/sparql/";
+	private static final String GEONAMES_4STORE_ENDPOINT_URL = "http://155.223.25.212:2000/sparql/";
+	private static final String DBPEDIA_4STORE_ENDPOINT_URL = "http://155.223.25.212:7000/sparql/";
+	private static final String NYTIMES_4STORE_ENDPOINT_URL = "http://155.223.25.212:9000/sparql/";
+	private static final String LMDB_4STORE_ENDPOINT_URL = "http://155.223.25.212:2500/sparql/";
 
 	private static final String CHEBI_ENDPOINT_URL = CHEBI_4STORE_ENDPOINT_URL;
 	private static final String KEGG_ENDPOINT_URL = KEGG_4STORE_ENDPOINT_URL;

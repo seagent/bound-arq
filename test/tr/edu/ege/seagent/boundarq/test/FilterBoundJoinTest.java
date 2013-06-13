@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.After;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import tr.edu.ege.seagent.boundarq.filterbound.QueryEngineFilter;
@@ -20,7 +21,6 @@ import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.sparql.engine.QueryEngineRegistry;
 
 import experience.AbstractBoundJoinTest;
-
 
 public class FilterBoundJoinTest extends AbstractBoundJoinTest {
 
@@ -103,6 +103,7 @@ public class FilterBoundJoinTest extends AbstractBoundJoinTest {
 
 	}
 
+	@Ignore
 	@Test
 	public void executeLifeSciences3() throws Exception {
 
@@ -143,11 +144,13 @@ public class FilterBoundJoinTest extends AbstractBoundJoinTest {
 
 	}
 
+	@Ignore
 	@Test
 	public void executeTwoFilterVariableQuery() throws Exception {
 
-		compareARQAndBoundJoin(SampleQueries.TWO_FILTER_VARIABLE_QUERY_LOCAL_DBPEDIA,
-				5, "subject", "label", "drug", "broader");
+		compareARQAndBoundJoin(
+				SampleQueries.TWO_FILTER_VARIABLE_QUERY_LOCAL_DBPEDIA, 5,
+				"subject", "label", "drug", "broader");
 
 	}
 

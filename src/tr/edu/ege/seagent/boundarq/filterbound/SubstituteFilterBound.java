@@ -42,7 +42,6 @@ import com.hp.hpl.jena.sparql.expr.ExprVar;
 import com.hp.hpl.jena.sparql.expr.nodevalue.NodeValueNode;
 import com.hp.hpl.jena.sparql.pfunction.PropFuncArg;
 
-
 public class SubstituteFilterBound extends Substitute {
 
 	public static List<Op> substitute(Op op, List<Binding> bindingList,
@@ -243,6 +242,8 @@ public class SubstituteFilterBound extends Substitute {
 			OpBGP opBGP = generateOpWithOnlyAppropriateTriple(filterTriple);
 			// get first variable of binding
 			ExprVar exprVar = new ExprVar(var);
+			// add the processed triple to the list...
+			addToList(filterTriple, addedList);
 			// create expression list to add binding values in filter
 			ExprList exprList = new ExprList();
 			for (int i = 0; i < bindingList.size(); i++) {

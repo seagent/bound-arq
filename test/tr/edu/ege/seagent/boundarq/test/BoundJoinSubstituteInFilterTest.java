@@ -25,8 +25,8 @@ public class BoundJoinSubstituteInFilterTest extends BoundJoinSubstituteTest {
 			+ "WHERE "
 			+ "{ SERVICE <http://dbpedia.org/sparql> "
 			+ "{ { ?resource ?p ?object "
-			+ "FILTER ( ?resource IN (<http://seagent.ege.edu.tr/resource/firstResource>, <http://seagent.ege.edu.tr/resource/secondResource>, <http://seagent.ege.edu.tr/resource/thirdResource>) ) "
 			+ "FILTER ( ?object IN (<http://seagent.ege.edu.tr/resource/firstObject>, <http://seagent.ege.edu.tr/resource/secondObject>, <http://seagent.ege.edu.tr/resource/thirdObject>) ) "
+			+ "FILTER ( ?resource IN (<http://seagent.ege.edu.tr/resource/firstResource>, <http://seagent.ege.edu.tr/resource/secondResource>, <http://seagent.ege.edu.tr/resource/thirdResource>) ) "
 			+ "} "
 			+ "{ ?resource2 ?p2 ?object2 . "
 			+ "?resource3 ?p3 ?object } " + "}}";
