@@ -2,7 +2,7 @@ package tr.edu.ege.seagent.boundarq.filterbound;
 
 import java.util.Stack;
 
-import org.openjena.atlas.logging.Log;
+import org.apache.jena.atlas.logging.Log;
 
 import com.hp.hpl.jena.sparql.algebra.Op;
 import com.hp.hpl.jena.sparql.algebra.OpVisitor;
@@ -30,6 +30,7 @@ import com.hp.hpl.jena.sparql.algebra.op.OpProcedure;
 import com.hp.hpl.jena.sparql.algebra.op.OpProject;
 import com.hp.hpl.jena.sparql.algebra.op.OpPropFunc;
 import com.hp.hpl.jena.sparql.algebra.op.OpQuad;
+import com.hp.hpl.jena.sparql.algebra.op.OpQuadBlock;
 import com.hp.hpl.jena.sparql.algebra.op.OpQuadPattern;
 import com.hp.hpl.jena.sparql.algebra.op.OpReduced;
 import com.hp.hpl.jena.sparql.algebra.op.OpSequence;
@@ -265,6 +266,12 @@ public class ExecutionDispatchFilter implements OpVisitor {
 	public void visit(OpTopN opTop) {
 		QueryIterator input = pop();
 		QueryIterator qIter = opExecutorFilter.execute(opTop, input);
+		push(qIter);
+	}
+
+	public void visit(OpQuadBlock quadBlock) {
+		QueryIterator input = pop();
+		QueryIterator qIter = opExecutorFilter.execute(quadBlock, input);
 		push(qIter);
 	}
 }

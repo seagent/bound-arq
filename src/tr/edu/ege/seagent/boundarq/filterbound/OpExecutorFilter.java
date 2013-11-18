@@ -27,6 +27,7 @@ import com.hp.hpl.jena.sparql.algebra.op.OpProcedure;
 import com.hp.hpl.jena.sparql.algebra.op.OpProject;
 import com.hp.hpl.jena.sparql.algebra.op.OpPropFunc;
 import com.hp.hpl.jena.sparql.algebra.op.OpQuad;
+import com.hp.hpl.jena.sparql.algebra.op.OpQuadBlock;
 import com.hp.hpl.jena.sparql.algebra.op.OpQuadPattern;
 import com.hp.hpl.jena.sparql.algebra.op.OpReduced;
 import com.hp.hpl.jena.sparql.algebra.op.OpSequence;
@@ -74,6 +75,12 @@ public class OpExecutorFilter extends OpExecutor {
 		OpExecutorFilter exec = createOpExecutor(execCxt);
 		QueryIterator q = exec.executeOp(op, qIter);
 		return q;
+	}
+
+	@Override
+	protected QueryIterator execute(OpQuadBlock quadBlock, QueryIterator input) {
+		// TODO Auto-generated method stub
+		return super.execute(quadBlock, input);
 	}
 
 	/**
@@ -297,6 +304,7 @@ public class OpExecutorFilter extends OpExecutor {
 		return super.execute(opTop, input);
 	}
 
+	@Override
 	protected QueryIterator execute(OpQuad opQuad, QueryIterator input) {
 		return super.execute(opQuad, input);
 	}

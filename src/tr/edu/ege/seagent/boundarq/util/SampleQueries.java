@@ -1,5 +1,6 @@
 package tr.edu.ege.seagent.boundarq.util;
 
+import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.sparql.vocabulary.FOAF;
 import com.hp.hpl.jena.vocabulary.OWL;
 import com.hp.hpl.jena.vocabulary.RDF;
@@ -145,6 +146,72 @@ public class SampleQueries {
 			+ "?drug <http://dbpedia.org/ontology/Drug/meltingPoint> ?melt. }}}";
 
 	public static final String FEDERATED_LIFE_SCIENCES_2 = "SELECT  ?predicate ?object WHERE {"
+			+ "{SERVICE <"
+			+ DRUGBANK_ENDPOINT_URL
+			+ "> "
+			+ "{<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> ?predicate ?object. }} "
+			+ "UNION {SERVICE <"
+			+ DRUGBANK_ENDPOINT_URL
+			+ "> "
+			+ "{<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> <http://www.w3.org/2002/07/owl#sameAs> ?caff. }"
+			+ "{ BIND(<"
+			+ DBPEDIA_ENDPOINT_URL
+			+ "> AS ?ser998816)}  "
+			+ "UNION { BIND(<"
+			+ KEGG_ENDPOINT_URL
+			+ "> AS ?ser998816)}  "
+			+ "UNION { BIND(<"
+			+ CHEBI_ENDPOINT_URL
+			+ "> AS ?ser998816)} "
+			+ "UNION { BIND(<"
+			+ DRUGBANK_ENDPOINT_URL
+			+ "> AS ?ser998816)}  SERVICE ?ser998816 "
+			+ "{?caff ?predicate ?object. }}}";
+
+	public static final String FEDERATED_CONSTRUCT_LIFE_SCIENCES_2 = "CONSTRUCT  {"
+			+ "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> ?predicate ?object."
+			+ "<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> <http://www.w3.org/2002/07/owl#sameAs> ?caff."
+			+ "?caff ?predicate ?object."
+			+ "} WHERE {"
+			+ "{SERVICE <"
+			+ DRUGBANK_ENDPOINT_URL
+			+ "> "
+			+ "{<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> ?predicate ?object. }} "
+			+ "UNION {SERVICE <"
+			+ DRUGBANK_ENDPOINT_URL
+			+ "> "
+			+ "{<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> <http://www.w3.org/2002/07/owl#sameAs> ?caff. }"
+			+ "{ BIND(<"
+			+ DBPEDIA_ENDPOINT_URL
+			+ "> AS ?ser998816)}  "
+			+ "UNION { BIND(<"
+			+ KEGG_ENDPOINT_URL
+			+ "> AS ?ser998816)}  "
+			+ "UNION { BIND(<"
+			+ CHEBI_ENDPOINT_URL
+			+ "> AS ?ser998816)} "
+			+ "UNION { BIND(<"
+			+ DRUGBANK_ENDPOINT_URL
+			+ "> AS ?ser998816)}  SERVICE ?ser998816 "
+			+ "{?caff ?predicate ?object. }}}";
+
+	public static final String FEDERATED_ASK_LIFE_SCIENCES_2 = "ASK  {"
+			+ "{SERVICE <"
+			+ DRUGBANK_ENDPOINT_URL
+			+ "> "
+			+ "{<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> ?predicate ?object. }} "
+			+ "UNION {SERVICE <"
+			+ DRUGBANK_ENDPOINT_URL
+			+ "> "
+			+ "{<http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugs/DB00201> <http://www.w3.org/2002/07/owl#sameAs> ?caff. }"
+			+ "{ BIND(<" + DBPEDIA_ENDPOINT_URL + "> AS ?ser998816)}  "
+			+ "UNION { BIND(<" + KEGG_ENDPOINT_URL + "> AS ?ser998816)}  "
+			+ "UNION { BIND(<" + CHEBI_ENDPOINT_URL + "> AS ?ser998816)} "
+			+ "UNION { BIND(<" + DRUGBANK_ENDPOINT_URL
+			+ "> AS ?ser998816)}  SERVICE ?ser998816 "
+			+ "{?caff ?predicate ?object. }}}";
+
+	public static final String FEDERATED_DESCRIBE_LIFE_SCIENCES_2 = "DESCRIBE ?caff  {"
 			+ "{SERVICE <"
 			+ DRUGBANK_ENDPOINT_URL
 			+ "> "

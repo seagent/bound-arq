@@ -9,9 +9,8 @@ import java.util.List;
 
 import tr.edu.ege.seagent.boundarq.filterbound.SubstituteFilterBound;
 
-import com.hp.hpl.jena.graph.Node;
+import com.hp.hpl.jena.graph.NodeFactory;
 import com.hp.hpl.jena.graph.Triple;
-import com.hp.hpl.jena.graph.query.Expression.Variable;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.sparql.algebra.Op;
@@ -23,7 +22,6 @@ import com.hp.hpl.jena.sparql.core.DatasetGraphFactory;
 import com.hp.hpl.jena.sparql.core.Var;
 import com.hp.hpl.jena.sparql.engine.binding.Binding;
 import com.hp.hpl.jena.sparql.engine.binding.BindingHashMap;
-
 
 public class BoundJoinSubstituteTest {
 
@@ -68,14 +66,15 @@ public class BoundJoinSubstituteTest {
 		OpBGP opBGP = (OpBGP) createSampleOp(firstTriple, secondTriple);
 
 		OpService opService = new OpService(
-				Node.createURI("http://dbpedia.org/sparql"), opBGP, false);
+				NodeFactory.createURI("http://dbpedia.org/sparql"), opBGP,
+				false);
 		/**
 		 * exercise SUT
 		 */
 		// generate filter op
 		List<Op> filterOpList = SubstituteFilterBound.substitute(opService,
 				bindingList, filterType);
-//		System.out.println(OpAsQuery.asQuery(filterOpList.get(0)));
+		// System.out.println(OpAsQuery.asQuery(filterOpList.get(0)));
 		/**
 		 * verify outcome
 		 */
@@ -113,14 +112,15 @@ public class BoundJoinSubstituteTest {
 		Triple secondTriple = createTriple("resource2", "p2", "o2");
 		Op opBGP = createSampleOp(firstTriple, secondTriple);
 		OpService opService = new OpService(
-				Node.createURI("http://dbpedia.org/sparql"), opBGP, false);
+				NodeFactory.createURI("http://dbpedia.org/sparql"), opBGP,
+				false);
 		/**
 		 * exercise SUT
 		 */
 		// generate filter op
 		List<Op> filterOpList = SubstituteFilterBound.substitute(opService,
 				bindingList, filterType);
-//		System.out.println(OpAsQuery.asQuery(filterOpList.get(0)));
+		// System.out.println(OpAsQuery.asQuery(filterOpList.get(0)));
 		/**
 		 * verify outcome
 		 */
@@ -155,14 +155,15 @@ public class BoundJoinSubstituteTest {
 		Triple thirdTriple = createTriple("resource3", "p3", "object");
 		Op opBGP = createSampleOp(firstTriple, secondTriple, thirdTriple);
 		OpService opService = new OpService(
-				Node.createURI("http://dbpedia.org/sparql"), opBGP, false);
+				NodeFactory.createURI("http://dbpedia.org/sparql"), opBGP,
+				false);
 		/**
 		 * exercise SUT
 		 */
 		// generate filter op
 		List<Op> filterOpList = SubstituteFilterBound.substitute(opService,
 				bindingList, filterType);
-//		System.out.println(OpAsQuery.asQuery(filterOpList.get(0)));
+		// System.out.println(OpAsQuery.asQuery(filterOpList.get(0)));
 		/**
 		 * verify outcome
 		 */
@@ -207,9 +208,9 @@ public class BoundJoinSubstituteTest {
 			String secondResourcePattern) {
 		BindingHashMap bindingHashMap = new BindingHashMap();
 		bindingHashMap.add(Var.alloc(firstVariableName),
-				Node.createURI(BASE_URI + firstResourcePattern));
+				NodeFactory.createURI(BASE_URI + firstResourcePattern));
 		bindingHashMap.add(Var.alloc(secondVariableName),
-				Node.createURI(BASE_URI + secondResourcePattern));
+				NodeFactory.createURI(BASE_URI + secondResourcePattern));
 		return bindingHashMap;
 	}
 
@@ -248,7 +249,7 @@ public class BoundJoinSubstituteTest {
 		// create sample binding with given variable name and resource URI
 		BindingHashMap bindingHashMap = new BindingHashMap();
 		bindingHashMap.add(Var.alloc(variableName),
-				Node.createURI(BASE_URI + resourcePattern));
+				NodeFactory.createURI(BASE_URI + resourcePattern));
 		return bindingHashMap;
 	}
 }

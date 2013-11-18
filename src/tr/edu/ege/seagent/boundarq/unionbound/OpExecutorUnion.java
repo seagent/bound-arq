@@ -27,6 +27,7 @@ import com.hp.hpl.jena.sparql.algebra.op.OpProcedure;
 import com.hp.hpl.jena.sparql.algebra.op.OpProject;
 import com.hp.hpl.jena.sparql.algebra.op.OpPropFunc;
 import com.hp.hpl.jena.sparql.algebra.op.OpQuad;
+import com.hp.hpl.jena.sparql.algebra.op.OpQuadBlock;
 import com.hp.hpl.jena.sparql.algebra.op.OpQuadPattern;
 import com.hp.hpl.jena.sparql.algebra.op.OpReduced;
 import com.hp.hpl.jena.sparql.algebra.op.OpSequence;
@@ -39,8 +40,6 @@ import com.hp.hpl.jena.sparql.algebra.op.OpUnion;
 import com.hp.hpl.jena.sparql.engine.ExecutionContext;
 import com.hp.hpl.jena.sparql.engine.QueryIterator;
 import com.hp.hpl.jena.sparql.engine.main.OpExecutor;
-
-
 
 public class OpExecutorUnion extends OpExecutor {
 
@@ -307,6 +306,11 @@ public class OpExecutorUnion extends OpExecutor {
 	@Override
 	protected QueryIterator root() {
 		return super.root();
+	}
+
+	@Override
+	protected QueryIterator execute(OpQuadBlock quadBlock, QueryIterator input) {
+		return super.execute(quadBlock, input);
 	}
 
 }

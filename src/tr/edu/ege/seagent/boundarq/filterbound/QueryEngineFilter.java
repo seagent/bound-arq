@@ -5,6 +5,7 @@ import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.sparql.algebra.Op;
 import com.hp.hpl.jena.sparql.core.DatasetGraph;
 import com.hp.hpl.jena.sparql.core.Substitute;
+import com.hp.hpl.jena.sparql.engine.ExecutionContext;
 import com.hp.hpl.jena.sparql.engine.Plan;
 import com.hp.hpl.jena.sparql.engine.QueryEngineFactory;
 import com.hp.hpl.jena.sparql.engine.QueryEngineRegistry;
@@ -13,6 +14,7 @@ import com.hp.hpl.jena.sparql.engine.binding.Binding;
 import com.hp.hpl.jena.sparql.engine.iterator.QueryIterRoot;
 import com.hp.hpl.jena.sparql.engine.iterator.QueryIteratorCheck;
 import com.hp.hpl.jena.sparql.engine.iterator.QueryIteratorTiming;
+import com.hp.hpl.jena.sparql.engine.main.QC;
 import com.hp.hpl.jena.sparql.engine.main.QueryEngineMain;
 import com.hp.hpl.jena.sparql.util.Context;
 
@@ -78,9 +80,6 @@ public class QueryEngineFilter extends QueryEngineMain {
 	@Override
 	public QueryIterator eval(Op op, DatasetGraph dsg, Binding input,
 			Context context) {
-		if (SUBSTITUE && !input.isEmpty())
-			op = Substitute.substitute(op, input);
-
 		ExecutionContextFilter execCxt = new ExecutionContextFilter(context,
 				dsg.getDefaultGraph(), dsg, QCFilter.getBoundFactory(context));
 		QueryIterator qIter1 = QueryIterRoot.create(input, execCxt);

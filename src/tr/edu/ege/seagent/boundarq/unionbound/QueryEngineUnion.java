@@ -16,7 +16,6 @@ import com.hp.hpl.jena.sparql.engine.iterator.QueryIteratorTiming;
 import com.hp.hpl.jena.sparql.engine.main.QueryEngineMain;
 import com.hp.hpl.jena.sparql.util.Context;
 
-
 public class QueryEngineUnion extends QueryEngineMain {
 
 	public static QueryEngineFactory getFactory() {
@@ -80,9 +79,6 @@ public class QueryEngineUnion extends QueryEngineMain {
 	@Override
 	public QueryIterator eval(Op op, DatasetGraph dsg, Binding input,
 			Context context) {
-		if (SUBSTITUE && !input.isEmpty())
-			op = Substitute.substitute(op, input);
-
 		ExecutionContextUnion execCxt = new ExecutionContextUnion(context,
 				dsg.getDefaultGraph(), dsg, QCUnion.getBoundFactory(context));
 		QueryIterator qIter1 = QueryIterRoot.create(input, execCxt);

@@ -23,7 +23,6 @@ import com.hp.hpl.jena.sparql.engine.binding.Binding;
 import com.hp.hpl.jena.sparql.engine.binding.BindingHashMap;
 import com.hp.hpl.jena.sparql.engine.binding.BindingRoot;
 
-
 public class QueryIterServiceFilter extends QueryIterServiceBound {
 
 	public QueryIterServiceFilter(QueryIterator input, OpService opService,
