@@ -137,7 +137,7 @@ public class SampleQueries {
 			+ "{?y <http://www.w3.org/2002/07/owl#sameAs> ?location. "
 			+ "?y <http://data.nytimes.com/elements/topicPage> ?news. }}";
 
-	public static final String FEDERATED_LIFE_SCIENCES_1 = "SELECT  ?drug ?melt WHERE {"
+	public static final String FEDERATED_LIFE_SCIENCES_1 = "SELECT ?drug ?melt WHERE {"
 			+ "{SERVICE <"
 			+ DRUGBANK_ENDPOINT_URL
 			+ "> "

@@ -13,6 +13,9 @@ import java.util.logging.Logger;
 import org.junit.Before;
 import org.junit.Ignore;
 
+import query.UndefinedQueryTypeException;
+import query.UnsupportedNodeTypeException;
+
 import tr.edu.ege.seagent.boundarq.test.UnionBoundJoinTest;
 
 import com.hp.hpl.jena.query.QueryExecution;
@@ -143,9 +146,10 @@ public abstract class AbstractBoundJoinTest {
 	 *            query to be executed.
 	 * @param expectedSolutionSize
 	 *            solution size to be compared.
+	 * @throws Exception
 	 */
 	protected void compareARQAndBoundJoin(String query,
-			int expectedSolutionSize, String... labels) {
+			int expectedSolutionSize, String... labels) throws Exception {
 		// check conrol solutions
 		List<QuerySolution> solutionsPureARQ = checkControlSolutions(query,
 				expectedSolutionSize, labels);
@@ -167,7 +171,7 @@ public abstract class AbstractBoundJoinTest {
 			int expectedSolutionSize, String... labels);
 
 	protected abstract List<QuerySolution> checkBoundJoinSolutionsResults(
-			String query, int expectedSolutionSize);
+			String query, int expectedSolutionSize) throws Exception;
 
 	protected ArrayList<QuerySolution> checkSolutions(int expectedSolutionSize,
 			ArrayList<QuerySolution> solutions) {
