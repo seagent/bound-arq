@@ -11,6 +11,7 @@ import java.util.List;
 import org.junit.After;
 import org.junit.Test;
 
+import tr.edu.ege.seagent.boundarq.filterbound.QueryEngineFilter;
 import tr.edu.ege.seagent.boundarq.unionbound.QueryEngineUnion;
 import tr.edu.ege.seagent.boundarq.unionbound.SubstituteUnionBound;
 import tr.edu.ege.seagent.boundarq.util.Constants;
@@ -18,6 +19,7 @@ import tr.edu.ege.seagent.boundarq.util.SampleQueries;
 
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.sparql.engine.QueryEngineRegistry;
@@ -49,7 +51,7 @@ public class UnionBoundJoinTest extends AbstractBoundJoinTest {
 
 		// execute triple chain query
 		compareARQAndBoundJoin(SampleQueries.TRIPLE_CHAIN_DBPEDIA_MOVIE_QUERY,
-				2, "createdMovie", "producer", "producerName");
+				1, "createdMovie", "producer", "producerName");
 	}
 
 	/**
@@ -63,8 +65,8 @@ public class UnionBoundJoinTest extends AbstractBoundJoinTest {
 
 		// execute double chain query
 		compareARQAndBoundJoin(
-				SampleQueries.DOUBLE_CHAIN_DBPEDIA_LMDB_MOVIE_QUERY, 71,
-				"movieLabel", "directorLMDB");
+				SampleQueries.DOUBLE_CHAIN_DBPEDIA_LMDB_MOVIE_QUERY, 40,
+				"movieName");
 	}
 
 	/**
@@ -79,8 +81,8 @@ public class UnionBoundJoinTest extends AbstractBoundJoinTest {
 
 		// execute double chain query
 		compareARQAndBoundJoin(
-				SampleQueries.TWO_VARIABLE_DOUBLE_CHAIN_DBPEDIA_MOVIE_QUERY,
-				15, "directorDBP", "createdMovieName", "editedMovieName");
+				SampleQueries.TWO_VARIABLE_DOUBLE_CHAIN_DBPEDIA_MOVIE_QUERY, 9,
+				"directorDBP", "createdMovieName", "editedMovieName");
 	}
 
 	/**
@@ -189,7 +191,7 @@ public class UnionBoundJoinTest extends AbstractBoundJoinTest {
 
 		// execute double chain query
 		compareARQAndBoundJoin(SampleQueries.DOUBLE_CHAIN_BIG_SOLUTION_QUERY,
-				104, "film", "filmName");
+				97, "film", "filmName");
 	}
 
 	/**
@@ -202,7 +204,7 @@ public class UnionBoundJoinTest extends AbstractBoundJoinTest {
 	public void compareARQAndBoundJoinForCrossDomainQuery() throws Exception {
 
 		// execute double chain query
-		compareARQAndBoundJoin(SampleQueries.CROSS_DOMAIN_QUERY_1, 286,
+		compareARQAndBoundJoin(SampleQueries.CROSS_DOMAIN_QUERY_1, 503,
 				"predicate", "object");
 	}
 
@@ -215,7 +217,7 @@ public class UnionBoundJoinTest extends AbstractBoundJoinTest {
 	@Test
 	public void executeSampleQueryWithBoundJoin() throws Exception {
 		long oldTime = Calendar.getInstance().getTimeInMillis();
-		ArrayList<QuerySolution> solutionsBoundJoin = getQuerySolutionsWithBoundJoin(SampleQueries.DOUBLE_CHAIN_DBPEDIA_LMDB_MOVIE_QUERY);
+		ArrayList<QuerySolution> solutionsBoundJoin = getQuerySolutionsWithBoundJoin(SampleQueries.DOUBLE_CHAIN_FILTER_QUERY);
 		// check solution list is not empty
 		assertFalse(solutionsBoundJoin.isEmpty());
 		// check whether the size of soliton list is correct

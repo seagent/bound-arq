@@ -315,6 +315,8 @@ public class SampleQueries {
 
 	private static final String LMDB_SERVICE_TAG = "<http://data.linkedmdb.org/sparql>";
 
+	private static final String NYTIMES_SERVICE_TAG = "<http://155.223.24.47:8891/nytimes/sparql>";
+
 	private static final String LMDB_SERVICE_BLOCK = SERVICE + LMDB_SERVICE_TAG;
 
 	private static final String PREFIXES = "PREFIX dbpedia: <http://dbpedia.org/ontology/>"
@@ -373,15 +375,12 @@ public class SampleQueries {
 
 	public static String DOUBLE_CHAIN_DBPEDIA_LMDB_MOVIE_QUERY = PREFIXES
 			+ "SELECT "
-			+ "?movieLabel "
-			+ "?directorLMDB "
+			+ "?movieName "
 			+ "WHERE { "
 			+ DBPEDIA_SERVICE_BLOCK
 			+ "{<http://dbpedia.org/resource/Amy_Irving> <http://dbpedia.org/property/spouse> ?directorDBP. "
-			+ "?directorDBP owl:sameAs ?directorLMDB. }"
-			+ LMDB_SERVICE_BLOCK
-			+ "{?movie <http://data.linkedmdb.org/resource/movie/producer> ?directorLMDB. "
-			+ "?movie rdfs:label ?movieLabel.}" + "}";
+			+ "?movie dbpedia:director ?directorDBP. }" + DBPEDIA_SERVICE_BLOCK
+			+ "{?movie foaf:name ?movieName.}" + "}";
 
 	public static String TWO_BIND_SERVICE_UNION_MOVIE_QUERY = PREFIXES
 			+ "SELECT "
@@ -406,7 +405,7 @@ public class SampleQueries {
 			+ DBPEDIA_SERVICE_TAG
 			+ " AS ?ser0)}"
 			+ " UNION {BIND("
-			+ LMDB_SERVICE_TAG
+			+ NYTIMES_SERVICE_TAG
 			+ " AS ?ser0)}"
 			+ " SERVICE ?ser0"
 			+ "{?subsidiary <http://dbpedia.org/ontology/keyPerson> <http://dbpedia.org/resource/Steven_Spielberg>.}"
@@ -416,7 +415,7 @@ public class SampleQueries {
 			+ DBPEDIA_SERVICE_TAG
 			+ " AS ?ser1)}"
 			+ " UNION {BIND("
-			+ LMDB_SERVICE_TAG
+			+ NYTIMES_SERVICE_TAG
 			+ " AS ?ser1)}"
 			+ " SERVICE ?ser1"
 			+ "{?subsidiary foaf:name ?subsidiaryName.}"
@@ -496,7 +495,7 @@ public class SampleQueries {
 			+ "WHERE { "
 			+ DBPEDIA_SERVICE_BLOCK
 			+ "{?city <http://dbpedia.org/ontology/country> <http://dbpedia.org/resource/Turkey>. "
-			+ "?city rdf:type <http://dbpedia.org/ontology/City>."
+			+ "?city dbpedia:type <http://dbpedia.org/resource/Metropolitan_municipality>."
 			+ "?city <http://dbpedia.org/ontology/isPartOf> <http://dbpedia.org/resource/Aegean_Region>."
 			+ "}"
 			+ DBPEDIA_SERVICE_BLOCK
