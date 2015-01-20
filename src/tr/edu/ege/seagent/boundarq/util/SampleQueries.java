@@ -319,7 +319,7 @@ public class SampleQueries {
 
 	private static final String LMDB_SERVICE_BLOCK = SERVICE + LMDB_SERVICE_TAG;
 
-	private static final String PREFIXES = "PREFIX dbpedia: <http://dbpedia.org/ontology/>"
+	public static final String PREFIXES = "PREFIX dbpedia: <http://dbpedia.org/ontology/>"
 			+ "PREFIX rdfs:"
 			+ "<"
 			+ RDFS.getURI()
@@ -339,7 +339,8 @@ public class SampleQueries {
 			+ "PREFIX dcterms: <http://purl.org/dc/terms/>"
 			+ "PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
 			+ "PREFIX dbprop: <http://dbpedia.org/property/>"
-			+ "PREFIX dbpedia: <http://dbpedia.org/ontology/>";
+			+ "PREFIX dbpedia: <http://dbpedia.org/ontology/>"
+			+ "PREFIX yago: <http://dbpedia.org/class/yago/>";
 	private static final String DBPEDIA_SERVICE_BLOCK = SERVICE
 			+ DBPEDIA_SERVICE_TAG;
 
@@ -357,6 +358,38 @@ public class SampleQueries {
 			+ "{?createdMovie <http://dbpedia.org/ontology/producer> ?producer.}"
 			+ DBPEDIA_SERVICE_BLOCK + "{?producer foaf:name ?producerName.}"
 			+ "}";
+
+	public static String DEDICATED_TRIPLE_CHAIN_DBPEDIA_MOVIE_QUERY = PREFIXES
+			+ "SELECT "
+			+ "?createdMovie "
+			+ "?producer "
+			+ "?producerName "
+			+ "WHERE { "
+			+ DBPEDIA_SERVICE_BLOCK
+			+ "{<http://dbpedia.org/resource/Amy_Irving> <http://dbpedia.org/property/spouse> ?directorDBP. "
+			+ "?createdMovie <http://dbpedia.org/ontology/creator> ?directorDBP."
+			+ " }"
+			+ DBPEDIA_SERVICE_BLOCK
+			+ "{?createdMovie <http://dbpedia.org/ontology/producer> ?producer.}"
+			+ DBPEDIA_SERVICE_BLOCK + "{?producer foaf:name ?producerName."
+			+ "?producer rdf:type yago:AmericanFilmProducers.}" + "}";
+
+	public static String FOUR_CHAIN_DBPEDIA_MOVIE_QUERY = PREFIXES
+			+ "SELECT "
+			+ "?producer "
+			+ "?film "
+			+ "?filmName "
+			+ "WHERE { "
+			+ DBPEDIA_SERVICE_BLOCK
+			+ "{<http://dbpedia.org/resource/Amy_Irving> <http://dbpedia.org/property/spouse> ?directorDBP. "
+			+ "?createdMovie <http://dbpedia.org/ontology/creator> ?directorDBP."
+			+ " }"
+			+ DBPEDIA_SERVICE_BLOCK
+			+ "{?createdMovie <http://dbpedia.org/ontology/producer> ?producer.}"
+			+ DBPEDIA_SERVICE_BLOCK + "{?producer rdf:type yago:AmericanFilmProducers."
+					+ "?film dbpedia:producer ?producer.}"
+			+ DBPEDIA_SERVICE_BLOCK + "{?film dbpedia:writer <http://dbpedia.org/resource/Alex_Kurtzman>."
+					+ "?film foaf:name ?filmName.}" + "}";
 
 	public static String TWO_VARIABLE_DOUBLE_CHAIN_DBPEDIA_MOVIE_QUERY = PREFIXES
 			+ "SELECT "

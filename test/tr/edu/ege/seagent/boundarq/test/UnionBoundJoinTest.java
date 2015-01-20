@@ -51,7 +51,7 @@ public class UnionBoundJoinTest extends AbstractBoundJoinTest {
 
 		// execute triple chain query
 		compareARQAndBoundJoin(SampleQueries.TRIPLE_CHAIN_DBPEDIA_MOVIE_QUERY,
-				1, "createdMovie", "producer", "producerName");
+				2, "createdMovie", "producer", "producerName");
 	}
 
 	/**
