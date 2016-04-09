@@ -13,11 +13,6 @@ import java.util.logging.Logger;
 import org.junit.Before;
 import org.junit.Ignore;
 
-import query.UndefinedQueryTypeException;
-import query.UnsupportedNodeTypeException;
-
-import tr.edu.ege.seagent.boundarq.test.UnionBoundJoinTest;
-
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QuerySolution;
@@ -26,6 +21,8 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.sparql.core.DatasetImpl;
 
+import tr.edu.ege.seagent.boundarq.test.UnionBoundJoinTest;
+
 @Ignore
 public abstract class AbstractBoundJoinTest {
 
@@ -33,8 +30,7 @@ public abstract class AbstractBoundJoinTest {
 	protected double boundExecutionTime;
 	protected DatasetImpl emptyDataset;
 	protected static final int UNION_COUNT = 15;
-	protected Logger logger = Logger.getLogger(UnionBoundJoinTest.class
-			.toString());
+	protected Logger logger = Logger.getLogger(UnionBoundJoinTest.class.toString());
 
 	/**
 	 * This method compares two {@link QuerySolution} list contains same
@@ -45,9 +41,8 @@ public abstract class AbstractBoundJoinTest {
 	 * @param solutionSize
 	 * @param labels
 	 */
-	protected void compareQueryResults(List<QuerySolution> solutionsPureARQ,
-			List<QuerySolution> solutionsBoundJoin, int solutionSize,
-			String... labels) {
+	protected void compareQueryResults(List<QuerySolution> solutionsPureARQ, List<QuerySolution> solutionsBoundJoin,
+			int solutionSize, String... labels) {
 		// iterate on each label
 		for (String label : labels) {
 			// define node lists for current label
@@ -79,10 +74,8 @@ public abstract class AbstractBoundJoinTest {
 	 * 
 	 * @return {@link QuerySolution} list of pure ARQ results.
 	 */
-	protected ArrayList<QuerySolution> getQuerySolutionsWithPureARQ(
-			String queryText) {
-		QueryExecution queryExecution = QueryExecutionFactory.create(queryText,
-				emptyDataset);
+	protected ArrayList<QuerySolution> getQuerySolutionsWithPureARQ(String queryText) {
+		QueryExecution queryExecution = QueryExecutionFactory.create(queryText, emptyDataset);
 		// get result set
 		ResultSet resultSet = queryExecution.execSelect();
 		// check whether it is not null
@@ -101,8 +94,7 @@ public abstract class AbstractBoundJoinTest {
 	 * @param bound
 	 * @return {@link QuerySolution} list
 	 */
-	protected ArrayList<QuerySolution> generateSolutionList(
-			ResultSet resultSet, boolean arq, boolean bound) {
+	protected ArrayList<QuerySolution> generateSolutionList(ResultSet resultSet, boolean arq, boolean bound) {
 		ArrayList<QuerySolution> solutions = new ArrayList<QuerySolution>();
 		calculateExecutionTime(resultSet, arq, bound, solutions);
 		return solutions;
@@ -117,8 +109,8 @@ public abstract class AbstractBoundJoinTest {
 	 * @param bound
 	 * @param solutions
 	 */
-	private void calculateExecutionTime(ResultSet resultSet, boolean arq,
-			boolean bound, ArrayList<QuerySolution> solutions) {
+	private void calculateExecutionTime(ResultSet resultSet, boolean arq, boolean bound,
+			ArrayList<QuerySolution> solutions) {
 		double before = System.currentTimeMillis();
 		if (resultSet.hasNext()) {
 			double after = System.currentTimeMillis();
@@ -148,33 +140,26 @@ public abstract class AbstractBoundJoinTest {
 	 *            solution size to be compared.
 	 * @throws Exception
 	 */
-	protected void compareARQAndBoundJoin(String query,
-			int expectedSolutionSize, String... labels) throws Exception {
+	protected void compareARQAndBoundJoin(String query, int expectedSolutionSize, String... labels) throws Exception {
 		// check conrol solutions
-		List<QuerySolution> solutionsPureARQ = checkControlSolutions(query,
-				expectedSolutionSize, labels);
-		logger.info(MessageFormat
-				.format("Execution of sample query with pure ARQ longs {0} miliseconds",
-						arqExecutionTime));
+		List<QuerySolution> solutionsPureARQ = checkControlSolutions(query, expectedSolutionSize, labels);
+		logger.info(MessageFormat.format("Execution of sample query with pure ARQ longs {0} miliseconds",
+				arqExecutionTime));
 		// check bound join solutions
-		List<QuerySolution> solutionsBoundJoin = checkBoundJoinSolutionsResults(
-				query, expectedSolutionSize);
-		logger.info(MessageFormat
-				.format("Execution of sample query with bound join longs {0} miliseconds",
-						boundExecutionTime));
+		List<QuerySolution> solutionsBoundJoin = checkBoundJoinSolutionsResults(query, expectedSolutionSize);
+		logger.info(MessageFormat.format("Execution of sample query with bound join longs {0} miliseconds",
+				boundExecutionTime));
 		// check the results are same
-		compareQueryResults(solutionsPureARQ, solutionsBoundJoin,
-				expectedSolutionSize, labels);
+		compareQueryResults(solutionsPureARQ, solutionsBoundJoin, expectedSolutionSize, labels);
 	}
 
-	protected abstract List<QuerySolution> checkControlSolutions(String query,
-			int expectedSolutionSize, String... labels);
+	protected abstract List<QuerySolution> checkControlSolutions(String query, int expectedSolutionSize,
+			String... labels);
 
-	protected abstract List<QuerySolution> checkBoundJoinSolutionsResults(
-			String query, int expectedSolutionSize) throws Exception;
+	protected abstract List<QuerySolution> checkBoundJoinSolutionsResults(String query, int expectedSolutionSize)
+			throws Exception;
 
-	protected ArrayList<QuerySolution> checkSolutions(int expectedSolutionSize,
-			ArrayList<QuerySolution> solutions) {
+	protected ArrayList<QuerySolution> checkSolutions(int expectedSolutionSize, ArrayList<QuerySolution> solutions) {
 		// check solution list is not empty
 		assertFalse(solutions.isEmpty());
 		// check whether the size of soliton list is correct
