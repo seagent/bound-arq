@@ -276,7 +276,6 @@ class ExecutionDispatchUnion implements OpVisitor {
 		push(qIter);
 	}
 
-	@Override
 	public void visit(OpQuadBlock quadBlock) {
 		QueryIterator input = pop();
 		QueryIterator qIter = opExecutorUnion.execute(quadBlock, input);
