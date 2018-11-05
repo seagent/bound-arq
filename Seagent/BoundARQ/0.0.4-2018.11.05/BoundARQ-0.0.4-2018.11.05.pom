@@ -17,16 +17,6 @@
 			<artifactId>jena-arq</artifactId>
 			<version>${arq.version}</version>
 		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>javax.xml.bind</groupId> -->
-		<!-- <artifactId>jaxb-api</artifactId> -->
-		<!-- <version>2.1</version> -->
-		<!-- </dependency> -->
-		<!-- <dependency> -->
-		<!-- <groupId>javax.xml.stream</groupId> -->
-		<!-- <artifactId>stax-api</artifactId> -->
-		<!-- <version>1.0</version> -->
-		<!-- </dependency> -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -36,7 +26,7 @@
 
 	<distributionManagement>
 		<repository>
-			<id>internal.repo</id>
+			<id>seagent.bound.arq</id>
 			<name>Bound ARQ Repository</name>
 			<url>file://${project.build.directory}/repository</url>
 		</repository>
